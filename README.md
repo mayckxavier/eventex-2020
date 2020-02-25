@@ -35,10 +35,10 @@ $ python manage.py test
 6. envie o codigo para o heroku
 
 ```console
-heroku create minhainstancia
-heroku config:push
-heroku config:set SECRET_KEY=`python contrib/secret_gen.py`
-heroku config:set DEBUG=False
+$ heroku create minhainstancia
+$ heroku config:push
+$ heroku config:set SECRET_KEY=`python contrib/secret_gen.py`
+$ heroku config:set DEBUG=False
 #configuro o email
-git push heroku master --force
+$ git push heroku master --force
 ```
