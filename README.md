@@ -3,6 +3,8 @@
 Sistema de Eventos encomendado pela Morena
 
 [![Build Status](https://travis-ci.org/mayckxavier/eventex-2020.svg?branch=master)](https://travis-ci.org/mayckxavier/eventex-2020)
+[![Maintainability](https://api.codeclimate.com/v1/badges/56e72f2c229b6373ffc7/maintainability)](https://codeclimate.com/github/mayckxavier/eventex-2020/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/56e72f2c229b6373ffc7/test_coverage)](https://codeclimate.com/github/mayckxavier/eventex-2020/test_coverage)
 
 ## Como desenvolver?
 
