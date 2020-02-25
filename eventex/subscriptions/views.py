@@ -21,11 +21,7 @@ def create(request):
     if not form.is_valid():
         return render(request, 'subscriptions/subscription_form.html', {'form': form})
 
-    _send_mail('Confirmacao de inscricao',
-               settings.DEFAULT_FROM_EMAIL,
-               form.cleaned_data['email'],
-               'subscriptions/subscription_email.txt',
-               form.cleaned_data)
+    _send_mail('Confirmacao de inscricao', form.cleaned_data['email'], form.cleaned_data)
 
     messages.success(request, 'Inscricao realizada com sucesso')
 
@@ -36,6 +32,8 @@ def new(request):
     return render(request, 'subscriptions/subscription_form.html', {'form': SubscriptionForm()})
 
 
-def _send_mail(subject, from_, to, template_name, context):
+def _send_mail(subject, to, context):
+    from_ = settings.DEFAULT_FROM_EMAIL
+    template_name = 'subscriptions/subscription_email.txt'
     body = render_to_string(template_name, context)
     mail.send_mail(subject, body, from_, [from_, to])
