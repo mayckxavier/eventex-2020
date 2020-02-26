@@ -6,3 +6,5 @@
 __pycache__
 staticfiles/
 .vscode
+.ipynb_checkpoints/
+Untitled.ipynb
